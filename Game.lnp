@@ -1,0 +1,11 @@
+--cpu Cortex-M4
+".\startup.o"
+".\pll.o"
+".\ssd2119.o"
+".\random.o"
+".\main.o"
+".\adc.o"
+--library_type=microlib --strict --scatter ".\Game.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Game.map" -o .\Game.axf
